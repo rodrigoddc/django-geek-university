@@ -5,21 +5,43 @@
           <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Our Services</h2>
           <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
         </div>
-        <div class="row">
-          {% for s in services %}
-          <!-- Services item -->
-          <div class="col-md-6 col-lg-4 col-xs-12">
-            <div class="services-item wow fadeInRight" data-wow-delay="0.3s">
-              <div class="icon">
-                <i class="{{ s.icon }}"></i>
+        <div class="card-deck">
+          {% if services %}
+            {% for s in services %}
+            <!-- Services item -->
+              {% if s.active %}
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight h-100" data-wow-delay="0.3s">
+                  <div class="icon">
+                    <i class="{{ s.icon }}"></i>
+                  </div>
+                  <div class="services-content">
+                    <h3><a href="#">{{ s.service }}</a></h3>
+                    <p>{{ s.description }}</p>
+                  </div>
+                </div>
               </div>
-              <div class="services-content">
-                <h3><a href="#">{{ s.service }}</a></h3>
-                <p>{{ s.description }}</p>
+              {% else %}
+              <div class="col-md-6 col-lg-4 col-xs-12">
+                <div class="services-item wow fadeInRight bg-light h-100" data-wow-delay="0.3s">
+                  <div class="icon">
+                    <i class="lni-cog"></i>
+                  </div>
+                  <div class="services-content">
+                    <h3><a>{{ s.service }}</a></h3>
+                  <div class="my-5">
+                    <p>Unavaliable at the moment. It'll be available soon. </p>
+                  </div>
+                  </div>
+                </div>
               </div>
-            </div>
+              {% endif %}
+            {% endfor %}
+          {% else%}
+          <div class="alert alert-secondary" role="alert">
+              Under construction, <a href="#" class="alert-link">you can go back here</a>. Sorry for this.
           </div>
-          {% endfor %}
+          {% endif%}
         </div>
       </div>
     </section>

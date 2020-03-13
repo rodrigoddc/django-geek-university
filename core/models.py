@@ -10,8 +10,8 @@ def get_file_path(_instance, filename):
 
 
 class Base(models.Model):
-    created = models.DateField('Created', auto_now_add=True)
-    modified = models.DateField('Modified', auto_now=True)
+    created = models.DateTimeField('Created', auto_now_add=True)
+    modified = models.DateTimeField('Modified', auto_now=True)
     active = models.BooleanField('Active?', default=True)
 
     class Meta:
@@ -39,6 +39,27 @@ class Service(Base):
         return self.service
 
 
+class Feature(Base):
+    ICON_CHOICES = (
+        ('lni-cog', 'Engine'),
+        ('lni-stats-up', 'Chart'),
+        ('lni-users', 'User'),
+        ('lni-layers', 'Design'),
+        ('lni-mobile', 'Mobile'),
+        ('lni-rocket', 'Rocket'),
+    )
+    name = models.CharField('Name', max_length=30)
+    description = models.TextField('Description', max_length=65)
+    icon = models.CharField('Icon', max_length=12, choices=ICON_CHOICES)
+
+    class Meta:
+        verbose_name = 'Feature'
+        verbose_name_plural = 'Features'
+
+    def __str__(self):
+        return self.name
+
+
 class Role(Base):
     role = models.CharField('Role', max_length=100)
 
@@ -53,7 +74,7 @@ class Role(Base):
 class Employee(Base):
     name = models.CharField('Employee', max_length=100)
     role = models.ForeignKey('core.Role', verbose_name='Role', on_delete=models.CASCADE)
-    bio = models.TextField('Bio', max_length=200)
+    bio = models.TextField('Bio', max_length=65)
     image = StdImageField('Image', upload_to=get_file_path,
                           variations={
                               'thumbs':
@@ -66,3 +87,4 @@ class Employee(Base):
     class Meta:
         verbose_name = 'Employee'
         verbose_name_plural = 'Employees'
+
