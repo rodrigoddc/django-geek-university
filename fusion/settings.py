@@ -24,9 +24,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'd%oj3h_co2d@y+8+!xj!*$3tco#(8)8(2ag^x78qvysan^%g#0'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'fusion-geek.herokuapp.com',
+]
 
 
 # Application definition
