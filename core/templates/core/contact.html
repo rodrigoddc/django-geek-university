@@ -1,0 +1,53 @@
+{% load static %}
+<section id="contact" class="section-padding bg-gray">
+      <div class="container">
+        <div class="section-header text-center">
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Countact Us</h2>
+          <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
+        </div>
+        <div class="row contact-form-area wow fadeInUp" data-wow-delay="0.3s">
+          <div class="col-lg-7 col-md-12 col-sm-12">
+            <div class="contact-block">
+              <form id="form_contact" method="POST" action="{% url 'core:index' %}" autocomplete="off">
+                  {% csrf_token %}
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="name" name="name" type="text" class="form-control"  placeholder="Name" required data-error="Please enter your name">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input id="email" name="email" type="email" placeholder="Email" class="form-control"  required data-error="Please enter your email">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                   <div class="col-md-12">
+                    <div class="form-group">
+                      <input id="subject" name="subject" type="text" placeholder="Subject" class="form-control" required data-error="Please enter your subject">
+                      <div class="help-block with-errors"></div>
+                    </div>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <textarea id="message" name="message" class="form-control" placeholder="Your Message" rows="7" data-error="Write your message" required></textarea>
+                      <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="submit-button text-left">
+                      <button class="btn btn-common" id="form-submit" type="submit">Send Message</button>
+                      <div id="msgSubmit" class="h3 text-center hidden"></div>
+                      <div class="clearfix"></div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-lg-5 col-md-12 col-xs-12">
+            <div class="map">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9221978767723!2d-46.35025858502341!3d-23.4993116847137!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce7b43881e4717%3A0xf103e4ae1a85a9cf!2sR.%20Minas%20Gerais%2C%20170%20-%20Morro%20Branco%2C%20Itaquaquecetuba%20-%20SP%2C%2008572-450!5e0!3m2!1spt-BR!2sbr!4v1584227010023!5m2!1spt-BR!2sbr" width="335" height="380" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>            </div>
+          </div>
+        </div>
+      </div>
+    </section>
