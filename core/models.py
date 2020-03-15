@@ -88,3 +88,6 @@ class Employee(Base):
         verbose_name = 'Employee'
         verbose_name_plural = 'Employees'
 
+    def __str__(self):
+        return self.name
+
