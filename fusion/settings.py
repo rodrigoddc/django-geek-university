@@ -27,6 +27,7 @@ SECRET_KEY = 'd%oj3h_co2d@y+8+!xj!*$3tco#(8)8(2ag^x78qvysan^%g#0'
 DEBUG = True
 
 ALLOWED_HOSTS = [
+    '*',
     'localhost',
     '127.0.0.1',
     'fusion-geek.herokuapp.com',
@@ -49,6 +50,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'django.middleware.locale.LocaleMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -137,6 +139,10 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 LOGOUT_REDIRECT_URL = 'index'
+
+LOCALE_PATHS = (
+    os.path.join(BASE_DIR, 'locale'),
+)
 
 # Email tests console
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'

@@ -1,0 +1,176 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-03-16 13:48-0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Rodrigo Delfino de Carvalho <rodrigodd1@gmail.com>\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: core/forms.py:11 core/models.py:52
+msgid "Name"
+msgstr "Nome"
+
+#: core/forms.py:12
+msgid "Email"
+msgstr "E-mail"
+
+#: core/forms.py:13
+msgid "Subject"
+msgstr "Assunto"
+
+#: core/forms.py:14
+msgid "Message"
+msgstr "Mensagens"
+
+#: core/models.py:14
+msgid "Created"
+msgstr "Criado em"
+
+#: core/models.py:15
+msgid "Modified"
+msgstr "Modificado em"
+
+#: core/models.py:24 core/models.py:45
+msgid "Engine"
+msgstr "Engrenagem"
+
+#: core/models.py:25 core/models.py:46
+msgid "Chart"
+msgstr "Gráfico"
+
+#: core/models.py:26 core/models.py:47
+msgid "User"
+msgstr "Usuário"
+
+#: core/models.py:27 core/models.py:48
+msgid "Design"
+msgstr "Design"
+
+#: core/models.py:28 core/models.py:49
+msgid "Mobile"
+msgstr "Celular"
+
+#: core/models.py:29 core/models.py:50
+msgid "Rocket"
+msgstr "Foguete"
+
+#: core/models.py:31 core/models.py:36
+msgid "Service"
+msgstr "Serviços"
+
+#: core/models.py:32 core/models.py:53
+msgid "Description"
+msgstr "Descrição"
+
+#: core/models.py:33 core/models.py:54
+msgid "Icon"
+msgstr "Ícone"
+
+#: core/models.py:37
+msgid "Services"
+msgstr "Serviços"
+
+#: core/models.py:57
+msgid "Feature"
+msgstr "Recurso"
+
+#: core/models.py:58
+msgid "Features"
+msgstr "Recursos"
+
+#: core/models.py:65 core/models.py:68 core/models.py:77
+msgid "Role"
+msgstr "Função"
+
+#: core/models.py:69
+msgid "Roles"
+msgstr "Funções"
+
+#: core/models.py:76 core/models.py:89
+msgid "Employee"
+msgstr "Funcionário"
+
+#: core/models.py:78
+msgid "Bio"
+msgstr "Bio"
+
+#: core/models.py:79
+msgid "Image"
+msgstr "Imagens"
+
+#: core/models.py:90
+msgid "Employees"
+msgstr "Funcionários"
+
+#: core/templates/core/features.html:6
+msgid "Awesome Features"
+msgstr "Recursos Impressionantes"
+
+#: core/templates/core/hero.html:20
+msgid "App, Business & SaaS"
+msgstr "App, Serviços & SaaS"
+
+#: core/templates/core/hero.html:21
+msgid "Landing Page"
+msgstr "Bem-vindo"
+
+#: core/templates/core/hero.html:22
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus "
+"quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga "
+"nesciunt dolorum nulla magnam veniam sapiente, fugiat!"
+msgstr ""
+"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus "
+"quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga "
+"nesciunt dolorum nulla magnam veniam sapiente, fugiat!"
+
+#: core/templates/core/hero.html:24
+msgid "Download Now"
+msgstr "Baixe agora"
+
+#: core/templates/core/hero.html:25
+msgid "Learn More"
+msgstr "Descubra mais"
+
+#: core/templates/core/services.html:6
+msgid "Our Services"
+msgstr "Nossos Serviços"
+
+#: core/templates/core/services.html:34
+msgid "Unavaliable at the moment. It'll be available soon. "
+msgstr "Indisponível no momento. Voltará em breve. "
+
+#: core/templates/core/services.html:43
+msgid "Under construction, "
+msgstr "Em construção, "
+
+#: core/templates/core/services.html:43
+msgid "you can go back here. "
+msgstr "você opde voltar aqui. "
+
+#: core/templates/core/services.html:43
+msgid "Sorry for this."
+msgstr "Desculpe-nos por isso"
+
+#: core/templates/core/team.html:6
+msgid "Meet our team"
+msgstr "Conheça nossa equipe "
+
+#: core/views.py:37
+msgid "Email successfully sent"
+msgstr "E-mail enviado com sucesso"
+
+#: core/views.py:41
+msgid "Fail sending email"
+msgstr "Erro ao enviar e-mail"

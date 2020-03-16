@@ -1,3 +1,4 @@
+{% load i18n %}
 {% load static %}
 <div id="hero-area" class="hero-area-bg">
     {% if messages %}
@@ -16,11 +17,12 @@
       <div class="row">
         <div class="col-lg-7 col-md-12 col-sm-12 col-xs-12">
           <div class="contents">
-            <h2 class="head-title">App, Business & SaaS<br>Landing Page </h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat!</p>
+            <h2 class="head-title">{% trans 'App, Business & SaaS' %}</h2>
+              <p class="h2">{% trans 'Landing Page' %}</p>
+            <p>{% trans 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem repellendus quasi fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat! fuga nesciunt dolorum nulla magnam veniam sapiente, fugiat!' %}</p>
             <div class="header-button">
-              <a href="#" class="btn btn-common">Download Now</i></a>
-              <a href="#" class="btn btn-border video-popup">Learn More</i></a>
+              <a href="#" class="btn btn-common">{% trans 'Download Now' %}</i></a>
+              <a href="#" class="btn btn-border video-popup">{% trans 'Learn More' %} </i></a>
             </div>
           </div>
         </div>

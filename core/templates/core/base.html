@@ -1,6 +1,7 @@
  <!DOCTYPE html>
+ {% load i18n %}
  {% load static %}
-<html lang="en">
+<html lang="{{ lang_browser }}">
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -39,7 +40,7 @@
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
               <li class="nav-item active">
-                <a class="nav-link" href="#hero-area">
+                <a class="nav-link" href="{% url 'core:index' %}">
                   Home
                 </a>
               </li>
@@ -68,6 +69,18 @@
                   Contact
                 </a>
               </li>
+
+            </ul>
+            <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
+                            {% get_language_info_list for available_languages as langs %}
+                {% for lang in langs %}
+                  <li class="nav-item">
+                    <a class="nav-link" href="{% url 'core:language' lang.code %}">
+                      {{ lang.code }}
+                    </a>
+
+                  </li>
+                {% endfor %}
             </ul>
           </div>
         </div>

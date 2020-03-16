@@ -1,8 +1,9 @@
+{% load i18n %}
 {% load static %}
 <section id="services" class="section-padding">
       <div class="container">
         <div class="section-header text-center">
-          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">Our Services</h2>
+          <h2 class="section-title wow fadeInDown" data-wow-delay="0.3s">{% trans 'Our Services' %}</h2>
           <div class="shape wow fadeInDown" data-wow-delay="0.3s"></div>
         </div>
         <div class="card-deck">
@@ -30,7 +31,7 @@
                   <div class="services-content">
                     <h3><a>{{ s.service }}</a></h3>
                   <div class="my-5">
-                    <p>Unavaliable at the moment. It'll be available soon. </p>
+                    <p>{% trans "Unavaliable at the moment. It'll be available soon. " %}</p>
                   </div>
                   </div>
                 </div>
@@ -39,7 +40,7 @@
             {% endfor %}
           {% else%}
           <div class="alert alert-secondary" role="alert">
-              Under construction, <a href="#" class="alert-link">you can go back here</a>. Sorry for this.
+              {% trans 'Under construction, ' %}<a href="#" class="alert-link">{% trans 'you can go back here. ' %}</a>{% trans 'Sorry for this.' %}
           </div>
           {% endif%}
         </div>
