@@ -72,11 +72,10 @@
 
             </ul>
             <ul class="navbar-nav mr-auto w-100 justify-content-end clearfix">
-                            {% get_language_info_list for available_languages as langs %}
-                {% for lang in langs %}
+                {% for lang in available_languages %}
                   <li class="nav-item">
-                    <a class="nav-link" href="{% url 'core:language' lang.code %}">
-                      {{ lang.code }}
+                    <a class="nav-link" href="{% url 'core:language' lang %}">
+                      {{ lang }}
                     </a>
 
                   </li>

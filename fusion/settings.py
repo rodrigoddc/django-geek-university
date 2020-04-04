@@ -87,7 +87,7 @@ DATABASES = {
     'default': dj_database_url.config(default='postgres://geek:0501@localhost:5432/geek'),
 }
 
-if not DEBUG:
+if DEBUG:
     DATABASES = {
         'default': dj_database_url.config(default='sqlite:///' + os.path.join(BASE_DIR, 'db.sqlite3')),
     }

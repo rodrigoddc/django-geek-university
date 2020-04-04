@@ -34,18 +34,22 @@ class IndexView(FormView):
         context['available_languages'] = ['en', 'pt-br']
 
         # get language from browser request
-        lang_browser = translation.get_language()
+        lang_browser = self.request.LANGUAGE_CODE
 
         # get language code if selected
         lang_code_selected = context['view'].kwargs.get('lang_code_selected', None)
 
-        # set lang_browser value to template tag html in attribute lang=""
-        context['lang_browser'] = lang_browser
-
         if lang_code_selected:
             translation.activate(lang_code_selected)
+
+            # set lang_browser value to template tag html in attribute lang=""
+            context['lang_browser'] = lang_code_selected
+
         else:
             translation.activate(lang_browser)
+
+            # set lang_browser value to template tag html in attribute lang=""
+            context['lang_browser'] = lang_browser
 
         return context
 
