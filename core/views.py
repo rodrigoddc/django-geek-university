@@ -42,13 +42,13 @@ class IndexView(FormView):
         if lang_code_selected:
             translation.activate(lang_code_selected)
 
-            # set lang_browser value to template tag html in attribute lang=""
+            # set lang_browser value to template attribute lang="" after translation
             context['lang_browser'] = lang_code_selected
 
         else:
             translation.activate(lang_browser)
 
-            # set lang_browser value to template tag html in attribute lang=""
+            # set lang_browser value to template attribute lang="" after translation
             context['lang_browser'] = lang_browser
 
         return context
