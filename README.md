@@ -1,7 +1,7 @@
 # django-geek-university
 Django web app based on Geek University course
 
-## Requirements
+## Main Requirements
 Python3.x.x
 Django2.x.x
 
